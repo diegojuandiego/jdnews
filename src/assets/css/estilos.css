@@ -1,0 +1,212 @@
+html {
+	font-family: "Trebuchet MS", verdana, sans-serif;
+}
+
+/* Encabezado y Pie */
+.encabezado, nav {
+	border-bottom: 2px solid orange;
+}
+
+.encabezado a, .encabezado a:visited, .encabezado a:hover {
+	text-decoration: none;
+}
+
+nav ul {
+	display: flex;
+	flex-wrap: nowrap;
+	text-align: center;
+	white-space: nowrap;
+}
+
+nav ul li {
+	display: inline-block;
+	font-weight: bold;
+	text-align: center;
+	padding: 0.5rem 2rem
+}
+
+nav ul li:hover {
+	background-color: orange;
+}
+
+nav ul li a:hover {
+	text-decoration: none;
+	color: white;
+}
+
+footer {
+	background-color: gray;
+	color: white;
+	font-size: 0.8rem;
+}
+
+/* General */
+
+a {
+	color: #1d4265;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: normal;
+	color: #1d4265;
+}
+
+h2.sub {
+	color: #fbb42d;
+	font-size: 1.2rem;
+}
+
+h3 a {
+	font-size: 1.1em;
+	color: #1d4265;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+h3 a:hover {
+	background-color: orange;
+	text-decoration: underline;
+}
+
+h6 {
+	font-weight: normal;
+	font-size: 0.9em;
+	color:gray;
+}
+
+img {
+	width:100%;
+}
+figcaption {
+	font-size: 0.75rem;
+	text-align: center;
+}
+
+p {
+	color: #515151;
+	padding: 0.5rem;
+	text-align: justify;
+}
+
+.invisible {
+	display:none;
+}
+
+
+
+
+
+
+
+
+/* Tabla */
+
+table {
+	width: auto;
+	min-width: 50%;
+}
+
+table img {
+	width: 16px;
+	margin: auto 0.4rem;
+}
+
+table img.js-admin:hover {
+	background: orange;
+	mix-blend-mode: difference;
+	cursor: pointer;
+}
+
+table, tr, td, th {
+	margin: 1rem auto;
+	border: 1px solid #1d4265;
+	padding: 0.35rem 0.5rem;
+	text-align: center;
+}
+
+.ajustar, table .ajustar, table .ajustar td {
+	width: auto;
+	min-width: 15%;
+	max-width: 25%;
+}
+
+.listaCelulares .controlesEdicion {
+	background-color: #ff7777;
+}
+
+.listaCelulares input, .listaCelulares .js-admin {
+	text-align: center;
+	font-size: 0.7rem;
+}
+
+.listaCelulares .js-filaEditando, .listaCelulares .js-filaEditando input,
+.listaCelulares .js-filaNueva, .listaCelulares .js-filaNueva input,
+.listaCelulares .js-filaEliminando,
+.listaCelulares .filaFiltros, .listaCelulares .filaFiltros input, .listaCelulares .filaFiltros select {
+	border: none;
+}
+
+.listaCelulares .js-filaEditando input,
+.listaCelulares .js-filaNueva input,
+.listaCelulares .filaFiltros input, .listaCelulares .filaFiltros select {
+	border-radius: 5px;
+}
+
+.listaCelulares .filaFiltros input {
+	font-size: 1rem;
+}
+
+.listaCelulares .js-filaResaltada, .listaCelulares .js-filaresaltada td {
+	background-color: orange;
+	color: white;
+}
+
+.listaCelulares .js-filaEditando {
+	background-color: #ff7e17;
+}
+
+.listaCelulares .js-filaEliminando {
+	background-color: #ff5555;
+	color: white;
+}
+
+.listaCelulares .js-filaNueva {
+	background-color: #48e08c;
+	color: white;
+}
+
+.listaCelulares .filaFiltros {
+	background-color: #177eff;
+}
+
+figcaption img {
+	width: 18px;
+	height: 18px;
+	margin-top: -4px;
+}
+
+.listaCelulares .colID {
+	display: none;
+}
+
+/* Formulario de Contacto */
+
+form {
+	padding: 2%;
+}
+
+.formContacto input, .formContacto button, .formContacto textarea, .formContacto label {
+	margin: 5px 15px;
+	margin-left: 0;
+	padding: 5px;
+	display: block;
+}
+
+.formContacto input, .formContacto textarea {
+	border: 2px solid grey;
+}
+
+.formContacto textarea {
+	width:80%;
+}

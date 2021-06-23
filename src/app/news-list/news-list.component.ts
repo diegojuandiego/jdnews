@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Noticia } from 'src/assets/feed/feed';
+import { NewsStoreService } from '../news-store.service';
+
 
 @Component({
   selector: 'app-news-list',
@@ -191,7 +193,9 @@ export class NewsListComponent implements OnInit {
           },
       ];
 
-  constructor() { }
+  constructor(private noticia:NewsStoreService) { }
+
+  cargarNoticia(n:Noticia) { this.noticia.cargarNoticia(n); }
 
   ngOnInit(): void {
   }

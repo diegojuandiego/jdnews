@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Noticia } from 'src/assets/feed/feed';
+import { Title } from '@angular/platform-browser';
+//import { Noticia } from 'src/assets/feed/feed';
 
 
 
@@ -12,4 +13,11 @@ import { Noticia } from 'src/assets/feed/feed';
 
 export class AppComponent {
   title = 'JDNews';
+  
+  // Para cambiar el título de la web al que yo quiero tengo que inyectar el servicio Title.
+  // Y de paso termino con un método que me va a ayudar a cambiar el título tras routing.
+  public constructor(private titleService: Title) { this.titleService.setTitle(this.title); } 
+
+  // Método para setear el título de la web.
+  public setTitle(t:string) { this.titleService.setTitle(this.title); }
 }

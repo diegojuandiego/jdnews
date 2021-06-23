@@ -11,7 +11,8 @@
             <div class="media">
               <img class="card-img-right flex-auto align-self-center d-block" src="{{noticia.enclosure}}">
             </div>
-            <a class="mt-2" href="{{noticia.link}}">Leer más...</a>
+            <!--<a class="mt-2" href="{{noticia.link}}">Leer más...</a>-->
+            <a class="mt-2" (click)="cargarNoticia(noticia)">Leer más...</a>
           </div>
         </div>
         
@@ -19,6 +20,6 @@
     </div>
   </div>
 
-  <div class="container-fluid card-body box-shadow">
+  <div class="container-fluid card-body flex-md-row box-shadow">
     <app-news-view [noticia] = "noticias[3]"></app-news-view>
   </div>

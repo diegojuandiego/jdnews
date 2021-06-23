@@ -5,4 +5,5 @@ export interface Noticia {
     description: string;
     pubDate: string;
     enclosure: string;
+    body: string;
 };

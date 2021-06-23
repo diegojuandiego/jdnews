@@ -1,0 +1,19 @@
+<div class="mt-5 d-flex justify-content-center">
+	<article class="blog-post container">
+		<h2 class="blog-post-title">
+			<header>{{noticia.title}}</header>
+		</h2>
+		<p class="p-0 blog-post-meta">
+			<time>{{noticia.pubDate}}</time>
+		</p>
+		<p class="p-0 m-0 blog-post-meta">
+			<figure>
+				<img src="{{noticia.enclosure}}" alt="{{noticia.description}}" />
+				<figcaption>{{noticia.description}}</figcaption>
+			</figure>
+		</p>
+		<p>
+			{{noticia.body}}
+		</p>
+	</article>
+</div>

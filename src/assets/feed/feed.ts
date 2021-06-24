@@ -6,4 +6,5 @@ export interface Noticia {
     pubDate: string;
     enclosure: string;
     body: string;
+    destacada:boolean;
 };

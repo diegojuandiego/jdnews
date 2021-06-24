@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-//import { Noticia } from 'src/assets/feed/feed';
-
 
 
 @Component({
@@ -20,4 +18,5 @@ export class AppComponent {
 
   // Método para setear el título de la web.
   public setTitle(t:string) { this.titleService.setTitle(this.title); }
+
 }

@@ -12,10 +12,16 @@ import { Noticia } from 'src/assets/feed/feed';
 
 export class NewsStoreService {
 
-  noticia!: Noticia;
+  private noticia!: Noticia;
+  private filtroDestacadas:boolean = false;
 
   constructor() { }
 
-  cargarNoticia(n:Noticia) { this.noticia = n; console.log(this.noticia.title);}
+  //Método que almacena la noticia en el servicio
+  storeNoticia(n:Noticia) { this.noticia = n }
+  //Método que devuelve el contenido de la noticia que tengo almacenada
+  getNoticia(): Noticia { return this.noticia } 
+  //Método que avisa si hay que filtrar las noticias (destacadas vs todas las noticias)
+  setFiltro(v:boolean = true) { this.filtroDestacadas = v; } 
 
 }

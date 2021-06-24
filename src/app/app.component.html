@@ -11,36 +11,35 @@
 </head>
 <body>
 
-	<header class="container-fluid mt-4 encabezado">
-		<a>
+	<header class="container-fluid pt-4 pb-4 encabezado">
+		<a [routerLink]="['/']">
 			<h1 class="text-center">Ciencia y Tecnología</h1>
 			<h2 class="text-center mb-3 sub">Vos y el reloj que no se detiene</h2>
 		</a>
 	</header>
 
-	<nav class="container-fluid nav-scroller">
+	<nav class="d-flex justify-content-center">
 		<ul class="nav d-flex justify-content-center">
 			<li>
-				<a class="" href="home.html">Inicio</a>
+				<a class="" [routerLink]="['/']">Inicio</a>
 			</li>
 			<li>
-				<a class="" href="sobreproyecto.html">Sobre el proyecto</a>
+				<a class="" [routerLink]="['/destacadas']">Destacadas</a>
 			</li>
 			<li>
-				<a class="" href="destacadas.html">Destacadas</a>
+				<a class="" [routerLink]="['/about']">Sobre el proyecto</a>
 			</li>
 			<li>
-				<a class="" href="contacto.html">Contacto</a>
+				<a class="" [routerLink]="['/contacto']">Contacto</a>
 			</li>
 		</ul>
 	</nav>
 
-
 	<div class="wrapper">
-		<app-news-list></app-news-list>
+		<router-outlet></router-outlet>
 	</div>
 
-	<footer class=" d-flex justify-content-center mt-4 m-2 p-4 rounded">
+	<footer class="d-flex justify-content-center mt-4 m-2 p-2 rounded">
 		<h5 class="jumbotron">Copyright (C) 2021 {{title | uppercase}}</h5>
 	</footer>
 
@@ -48,5 +47,3 @@
   	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
-
-<router-outlet></router-outlet>

@@ -53,7 +53,7 @@
             <div class="p-2 col">
               <h2>Ruteo</h2>
               <p>Se utilizó el servicio de Ruteo de Angular para evitar que el usuario pueda acceder a rutas permitidas por la aplicación pero que sin la lógica no funcionarían.</p>
-              <p>En este caso particular, la ruta "/read" (visualización de una noticia) permite visualizar la selección si la lógica la maneja la aplicación. Pero si el usuario la utiliza, la pantalla quedaría en blanco. Para evitar ese bug se redirecciona la aplicación a la página "home".</p>
+              <p>En este caso particular, la ruta "/read" (visualización de una noticia) permite visualizar la selección si la lógica la maneja la aplicación. Si hubo una noticia seleccionada y luego se vuelve al componente, este "accidente feliz" funciona como revisar la última noticia visitada. Pero si el usuario la utiliza sin antes haber cargado una noticia o tras refrescar la pantalla, la pantalla quedaría en blanco. Para evitar ese bug se redirecciona la aplicación a la página "home".</p>
               <p><a class="btn btn-secondary" [routerLink]="['/read']" role="button">Ir a "/read" &raquo;</a></p>
             </div>
           </div>

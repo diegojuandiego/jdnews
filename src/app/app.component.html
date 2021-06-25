@@ -12,7 +12,7 @@
 <body>
 
 	<header class="container-fluid pt-4 pb-4 encabezado">
-		<a [routerLink]="['/']">
+		<a (click)="filtrar(false)" [routerLink]="['/noticias']">
 			<h1 class="text-center">Ciencia y Tecnología</h1>
 			<h2 class="text-center mb-3 sub">Vos y el reloj que no se detiene</h2>
 		</a>

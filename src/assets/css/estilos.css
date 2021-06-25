@@ -5,7 +5,9 @@ html {
 /* Encabezado y Pie */
 
 header {
-	background-color:rgba(0, 0, 0, 0.01);
+	
+	background-image: url("/fondotecno.jpg");
+	background-position: 20% 75%;
 }
 
 .encabezado a, .encabezado a:visited, .encabezado a:hover {

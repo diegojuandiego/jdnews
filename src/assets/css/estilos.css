@@ -6,8 +6,8 @@ html {
 
 header {
 	
-	background-image: url("/fondotecno.jpg");
-	background-position: 20% 75%;
+	background-image: url("/assets/css/fondotecno.jpg");
+	background-position: 20% 85%;
 }
 
 .encabezado a, .encabezado a:visited, .encabezado a:hover {

@@ -14,16 +14,11 @@ export class NewsStoreService {
 
   private noticia!: Noticia;
   private filtroDestacadas:boolean = false;
-
-  constructor() { }
-
-  //Método que almacena la noticia en el servicio
-  storeNoticia(n:Noticia) { this.noticia = n }
-  //Método que devuelve el contenido de la noticia que tengo almacenada
-  getNoticia(): Noticia { return this.noticia } 
   
-  //Método que avisa si hay que filtrar las noticias (destacadas vs todas las noticias)
-  setFiltro(v:boolean = true) { this.filtroDestacadas = v; } 
-  getFiltro():boolean { return this.filtroDestacadas; }
-
+  storeNoticia(n:Noticia) { this.noticia = n } //Método que almacena la noticia en el servicio
+  getNoticia(): Noticia { return this.noticia } //Método que devuelve el contenido de la noticia que tengo almacenada
+  setFiltro(v:boolean = true) { this.filtroDestacadas = v; } //Método que setea la indicación de filtro
+  getFiltro():boolean { return this.filtroDestacadas; } //Método que devuelve la indicación de filtro
+  
+  constructor() { }
 }

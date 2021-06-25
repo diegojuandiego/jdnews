@@ -19,7 +19,7 @@ export class AppComponent {
 
   // Método para setear el título de la web.
   public setTitle(t:string) { this.titleService.setTitle(this.title); }
-  // Método para aislar el funcionamiento del filtro por "destacadas"
+  // Método para aislar el funcionamiento del filtro por "destacadas" en este scope
   public filtrar(val:boolean = true) { this.n.setFiltro(val); }
 
 }

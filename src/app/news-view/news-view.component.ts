@@ -1,7 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Noticia } from 'src/assets/feed/feed';
 import { NewsStoreService } from '../news-store.service';
 import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-news-view',
@@ -11,10 +12,12 @@ import { Title } from '@angular/platform-browser';
 export class NewsViewComponent implements OnInit {
 
   noticia!: Noticia;
+  private naux!: Noticia;
 
-  constructor(private n:NewsStoreService, private titleService: Title) {
-    if(this.n) this.noticia = this.n.getNoticia();
-    titleService.setTitle(n.getNoticia().title);
+  constructor(private n: NewsStoreService, private titleService: Title, private router: Router) {
+    this.naux = this.n.getNoticia();
+    if(this.naux) this.noticia = this.naux; else router.navigate(['/']); //Lógica para redireccionar si la noticia almacenada está vacía (en el caso de entrar manualmente a la URL)
+    titleService.setTitle(n.getNoticia().title); //Título de la página
   }
 
   ngOnInit(): void {

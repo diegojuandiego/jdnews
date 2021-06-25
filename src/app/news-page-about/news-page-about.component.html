@@ -1,0 +1,62 @@
+<div class="p-2">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron jumbotron-fluid p-4 mb-3 mt-2 rounded bg-light bg-gradient">
+        <div class="container justify-contents-center col-sm-12 col-md-10 col-xl-8 col-xxl-6">
+          <h2 class="display-3"></h2>
+          <h4>El trabajo para Web 1 consistía en un sitio web símil portal de noticias. <br>En este caso, apuntaba como su nombre lo indica a ciencias y tecnología.</h4>
+          <p>El mismo consta de las siguientes páginas:</p>
+              <ul>
+                  <li><strong>Inicio/Noticias</strong>: El feed completo de noticias del sitio.</li>
+                  <li><strong>Destacadas</strong>: Una selección de noticias destacadas bajo un criterio no informado.</li>
+                  <li><strong>Sobre el proyecto</strong>: Esta sección. Una breve reseña del diagramado del sitio.</li>
+                  <li><strong>Contacto</strong>: Un apartado con algunos medios de contacto.</li>
+              </ul>
+        </div>
+      </div>
+
+      <div class="jumbotron jumbotron-fluid p-4 mb-5 rounded bg-light bg-gradient">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="p-2 col">
+            <h2>El feed de noticias</h2>
+            <p>El listado de noticias fue extraído del feed RSS de Tecnología de la agencia Télam. Curiosamente las noticias son viejísimas por lo que deduzco que dicho feed está discontinuado.</p>
+            <p><a class="btn btn-secondary" href="https://www.telam.com.ar/rss" role="button">https://www.telam.com.ar/rss</a></p>
+          </div>
+          <div class="p-2 col">
+            <h2>El display de noticias</h2>
+            <p>El componente "<strong>news list</strong>"" es un bucle ngFor de una plantilla tipo "tarjeta" con información sobre las noticias.</p>
+            <p>El typescript carga el feed de noticias en una variable que será iterada, llamando al servicio "<strong>news serve</strong>" que devuelve un arreglo, imitando a una API.</p>
+            <p>Al hacer click en una noticia, es capaz de cargarla en el servicio "<strong>news store</strong>" (a través de un método del mismo) que utilizamos a modo de almacenamiento.</p>
+            <p><a class="btn btn-secondary" [routerLink]="['/noticias']" role="button">Feed de Noticias &raquo;</a></p>
+          </div>
+          <div class="p-2 col">
+            <h2>La lectura de una noticia</h2>
+            <p>El componente "<strong>news view</strong>" accede al contenido de la misma, mediante un método público del servicio "<strong>news store</strong>" donde previamente habíamos almacenado la noticia seleccionada.</p>
+            <p></p>
+            <p></p>
+            <p><a class="btn btn-secondary" [routerLink]="['/noticias']" role="button">Feed de Noticias &raquo;</a></p>
+          </div>
+        </div>
+        <div class="row mt-5">
+            <div class="p-2 col">
+              <h2>Noticias destacadas</h2>
+              <p>Algunas noticias están marcadas o destacadas mediante el atributo homónimo. En el sitio se pueden ver con el tag <span class="rounded bg-info p-1 pt-0 pb-0 text-white">DESTACADA</span>.</p>
+              <p>El servicio que usamos como reservorio para la noticia a mostrar, "<strong>news store</strong>", también almacena una propiedad que determina si el contenido debe ser filtrado. Esta última se modifica mediante métodos que expone dicho servicio cada vez que elegimos mostrar la lista completa de noticias, o sólo las destacadas, mediante un evento "(click)" en la barra de navegación.</p>
+              <p></p>
+              <p><a class="btn btn-secondary" [routerLink]="['/noticias']" role="button">Feed de Noticias &raquo;</a></p>
+            </div>
+            <div class="p-2 col">
+              <h2>Título... ¿Desapercibido?</h2>
+              <p>En Angular, el título de la página queda determinado a la hora de creación del proyecto, a tal punto que ni siquiera se puede modificar en el atributo "title" de <i>app.component.html</i>. Para ello se inyectó en cada componente que lo requiera el servicio que provee Angular para sortear esta situación. Con un método que provee dicho servicio se modifica el título del sitio para hacer la experiencia más amena y considerada para con el usuario.</p>
+              <p><a class="btn btn-secondary" [routerLink]="['/contacto']" role="button">Página de Contacto &raquo;</a></p>
+            </div>
+            <div class="p-2 col">
+              <h2>Ruteo</h2>
+              <p>Se utilizó el servicio de Ruteo de Angular para evitar que el usuario pueda acceder a rutas permitidas por la aplicación pero que sin la lógica no funcionarían.</p>
+              <p>En este caso particular, la ruta "/read" (visualización de una noticia) permite visualizar la selección si la lógica la maneja la aplicación. Si hubo una noticia seleccionada y luego se vuelve al componente, este "accidente feliz" funciona como revisar la última noticia visitada. Pero si el usuario la utiliza sin antes haber cargado una noticia o tras refrescar la pantalla, la pantalla quedaría en blanco. Para evitar ese bug se redirecciona la aplicación a la página "home".</p>
+              <p><a class="btn btn-secondary" [routerLink]="['/read']" role="button">Ir a "/read" &raquo;</a></p>
+            </div>
+          </div>
+
+      </div> <!-- /container -->
+</div>

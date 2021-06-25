@@ -1,23 +1,18 @@
-<!--
-<div class="mt-5 justify-content-center">
--->
-	<article class="blog-post container justify-content-center">
-		<h2 class="blog-post-title">
-			<header>{{noticia.title}}</header>
-		</h2>
-		<p class="p-0 blog-post-meta">
-			<time>{{noticia.pubDate}}</time>
+<div class="container col-md-8 text-center">
+	<article class="rounded sombra flex-md-row p-4 flex-md-row">
+		<h1 class="blog-post-title">{{noticia.title}}</h1>
+		<p class="blog-post-meta">
+			<strong class="etiqueta bg-secondary rounded text-white" *ngIf="noticia.destacada">DESTACADA</strong>
+			<time class="text-muted">{{noticia.pubDate | date:'short'}}</time>
 		</p>
 		<p class="p-0 m-0 blog-post-meta">
-			<figure>
-				<img src="{{noticia.enclosure}}" alt="{{noticia.description}}" />
-				<figcaption>{{noticia.description}}</figcaption>
+			<figure class="justify-content-center">
+				<img class="container" src="{{noticia.enclosure}}" alt="{{noticia.description}}" />
+				<figcaption class="p-2 text-muted">{{noticia.description}}</figcaption>
 			</figure>
 		</p>
-		<p>
+		<p class="m-2 blog-post">
 			{{noticia.body}}
 		</p>
 	</article>
-<!--
 </div>
--->

@@ -21,10 +21,10 @@
 	<nav class="d-flex justify-content-center">
 		<ul class="nav d-flex justify-content-center">
 			<li>
-				<a class="" [routerLink]="['/']">Inicio</a>
+				<a class="" (click)="filtrar(false)" [routerLink]="['/']">Inicio</a>
 			</li>
 			<li>
-				<a class="" [routerLink]="['/destacadas']">Destacadas</a>
+				<a class="" (click)="filtrar(true)" [routerLink]="['/destacadas']">Destacadas</a>
 			</li>
 			<li>
 				<a class="" [routerLink]="['/about']">Sobre el proyecto</a>

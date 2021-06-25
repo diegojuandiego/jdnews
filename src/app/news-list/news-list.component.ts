@@ -220,6 +220,8 @@ export class NewsListComponent implements OnInit {
 
   //Método que dispara el almacenamiento de una noticia en el servicio, utilizando método de este último.
   loadNoticia(n:Noticia) { this.noticia.storeNoticia(n); }
+  //Método que averigua si el servicio está filtrando
+  getFiltro():boolean { return this.noticia.getFiltro() }
 
   ngOnInit(): void {
   }

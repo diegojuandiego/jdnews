@@ -21,7 +21,9 @@ export class NewsStoreService {
   storeNoticia(n:Noticia) { this.noticia = n }
   //Método que devuelve el contenido de la noticia que tengo almacenada
   getNoticia(): Noticia { return this.noticia } 
+  
   //Método que avisa si hay que filtrar las noticias (destacadas vs todas las noticias)
   setFiltro(v:boolean = true) { this.filtroDestacadas = v; } 
+  getFiltro():boolean { return this.filtroDestacadas; }
 
 }

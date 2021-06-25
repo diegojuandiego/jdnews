@@ -14,6 +14,7 @@ const routes: Routes = [
   {path: 'read', component: NewsViewComponent},
   {path: 'about', component: NewsPageAboutComponent},
   {path: 'contacto', component: NewsPageContactComponent},
+  {path: '**', redirectTo: '/noticias'},
 ];
 
 @NgModule({
